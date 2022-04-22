@@ -1,3 +1,6 @@
+The App is simple to use. That is after you navigate to the movie details page you can always go back to the home page by clicking the name of the website
+MovieApp
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
