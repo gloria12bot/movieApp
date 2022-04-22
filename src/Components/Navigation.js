@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/#">
+          <Link className="navbar-brand" to={'/'}>
             MovieApp
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -19,20 +20,6 @@ function Navigation() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav p-3 ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/#">
-                  Movies
-                </a>
-              </li>
-              <li className="nav-item px-3">
-                <a className="nav-link" href="/#">
-                  Favourites
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
     </div>
