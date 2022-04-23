@@ -27,7 +27,7 @@ function Moviesdetails() {
         <div className=" movies-details">
           <Navigation />
           {/* jsx component to populate the data of the specific movie id */}
-          <div className="container-fluid p-5">
+          <div className="container-fluid p-5" style={{ width: "80%" }}>
             <img
               src={movie.medium_cover_image}
               alt="movie"
@@ -43,9 +43,9 @@ function Moviesdetails() {
               &#9733;
             </h4>
             <p>{movie.genre}</p>
-            <h5>
+            <p >
               <span>{movie.description_full}</span>
-            </h5>
+            </p>
           </div>
         </div>
       )}
