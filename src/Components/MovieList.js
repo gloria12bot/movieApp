@@ -25,7 +25,7 @@ useEffect(() => {
       <div className="row">
         {/* list of the movies  */}
         {movies.map((movie, index) => (
-          <div className="col-md-2 p-4 ">
+          <div className="col-lg-3 pb-4 ">
             {/* a link required to fetch a specific id when the image is clicked */}
             <Link to={`/movies/${movie.id}`}>
               <img
