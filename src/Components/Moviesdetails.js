@@ -24,10 +24,10 @@ function Moviesdetails() {
   return (
     <div>
       {movie && (
-        <div className=" movies-details">
+        <div className=" movies-details pt-5">
           <Navigation />
           {/* jsx component to populate the data of the specific movie id */}
-          <div className="container-fluid p-5" style={{ width: "80%" }}>
+          <div className="container-fluid p-5 " style={{ width: "80%" }}>
             <img
               src={movie.medium_cover_image}
               alt="movie"
@@ -35,17 +35,17 @@ function Moviesdetails() {
             ></img>
             <h1>
               Title:
-              <span> {movie.title_long}</span>
+              <span> {movie.title}</span>
             </h1>
-            <h4>
+            <p className="MovieInfo">
               MovieRate:
-              <span> {movie.rating} </span>
-              &#9733;
-            </h4>
-            <p>{movie.genre}</p>
-            <p >
-              <span>{movie.description_full}</span>
+              <span> {movie.rating} &#9733;</span>
             </p>
+            <p className="MovieInfo">Genre: {movie.genres.join(" ,   ")}</p>
+            <p className="MovieInfo">Year: {movie.year}</p>
+            <p className="MovieInfo">Language: {movie.language}</p>
+            <p className="MovieInfo">Released Date: {movie.date_uploaded}</p>
+            <p className="MovieInfo">Movie Runtime: {movie.runtime} minutes </p>
           </div>
         </div>
       )}

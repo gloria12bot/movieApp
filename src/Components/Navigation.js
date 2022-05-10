@@ -1,27 +1,32 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React,{useState} from 'react'
+// import { Link } from "react-router-dom";
+import "./App.css";
+import Logo from "../output-onlinepngtools (1).png";
+import { Link } from 'react-router-dom';
 
 function Navigation() {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    window.onscroll = () => {
+      setIsScrolled(window.pageYOffset === 0 ? false : true);
+      return () => (window.onscroll = null);
+    };
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to={'/'}>
-            MovieApp
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+    <div className={isScrolled ? "app-nav scrolled" : "app-nav"}>
+      <div className="container">
+        <div className="left">
+          <img src={Logo} alt="" />
         </div>
-      </nav>
+        <div className="right">
+          <Link to={"/"} className="links">
+            <span>Homepage</span>
+          </Link>
+          <span>Series</span>
+          <span>Movies</span>
+          <span>New and Popular</span>
+          <span>My List</span>
+        </div>
+      </div>
     </div>
   );
 }
